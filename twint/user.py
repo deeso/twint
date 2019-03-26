@@ -15,7 +15,9 @@ def inf(ur, _type):
     except Exception as e:
         print("Error: " + str(e))
 
-    if _type == "id":
+    if group is None:
+        ret = 0
+    elif _type == "id":
         ret = group["data-user-id"]
     elif _type == "name":
         ret = group["data-name"]
